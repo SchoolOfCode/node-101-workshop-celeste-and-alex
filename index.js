@@ -27,16 +27,16 @@ import myCollection from './collection.js';
 
     // task 2
     function describeItem(item) {
-if(item === 1) {
+if(item.count === 1) {
         console.log
-(chalk.cyan(`I have a ${item.name}. Here's what I like about it: ${item.whatILike}.`))
+(`I have a ${chalk.cyan(item.name)}. Here's what I like about it: ${chalk.green(item.whatILike)}.`)
     } else {
-        (console.log(chalk.yellow(`I have ${item.count} ${item.name}'s. Here's what I like about them: ${item.whatILike}`)))
+        (console.log(`I have ${chalk.yellow(item.count)} ${chalk.cyan(item.name)}s. Here's what I like about them: ${chalk.green(item.whatILike)}`))
     }
 };
     
 
-describeItem(myCollection[0]);
+describeItem(myCollection[1]);
 
 // task 2d
 function describeCollection(arr) {
